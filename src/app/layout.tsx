@@ -12,6 +12,17 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Shakta Technology - Building Experiences That Matter",
   description: "We transform ideas into powerful software solutions that drive business growth and user engagement.",
+  openGraph: {
+    title: "Shakta Technology - Building Experiences That Matter",
+    description: "We transform ideas into powerful software solutions that drive business growth and user engagement.",
+    siteName: "Shakta Technology",
+    locale: "en_US",
+    type: "website",
+  },
+  icons: {
+    icon: "/logo.png",
+  }
+
 }
 
 export default function RootLayout({
