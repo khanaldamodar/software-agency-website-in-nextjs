@@ -212,8 +212,8 @@ export default function ServicesPage() {
 
             <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" variants={staggerContainer}>
               {process.map((step, index) => (
-                <motion.div key={index} variants={fadeInUp}>
-                  <Card className="text-center p-6 h-full">
+                <motion.div key={index} variants={fadeInUp} >
+                  <Card className="text-center p-6 h-full bg-white">
                     <CardContent className="space-y-4">
                       <div className="w-16 h-16 mx-auto bg-[#2563EB] text-[#FFFFFF] rounded-full flex items-center justify-center text-2xl font-bold">
                         {step.step}
