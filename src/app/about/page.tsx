@@ -143,7 +143,7 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Our Story</h2>
               <div className="space-y-4 text-[#334155]">
                 <p>
-                  Founded in 2019, DigitalCraft started as a small team of passionate developers who believed that great
+                  Founded in 2019, Shakta Technology started as a small team of passionate developers who believed that great
                   software could make a real difference in people's lives. What began as a side project quickly grew
                   into a full-service digital agency.
                 </p>
@@ -160,13 +160,13 @@ export default function AboutPage() {
             </motion.div>
 
             <motion.div variants={fadeInUp}>
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden relative h-100 w-200">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/ourstory.jpg"
                   alt="Our team working together"
-                  width={600}
-                  height={400}
+                  fill
                   className="w-full h-64 lg:h-80 object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </Card>
             </motion.div>
@@ -306,7 +306,7 @@ export default function AboutPage() {
 
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={fadeInUp}>
               <Button size="lg" asChild>
-                <Link href="/contact">
+                <Link href="/contact" className="text-white">
                   Get In Touch
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

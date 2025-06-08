@@ -198,7 +198,7 @@ export default function PortfolioPage() {
 
                     <div className="flex space-x-4">
                       <Button asChild>
-                        <Link href={item.liveUrl}>
+                        <Link href={item.liveUrl} className="text-white">
                           View Live
                           <ExternalLink className="ml-2 h-4 w-4" />
                         </Link>
@@ -253,6 +253,9 @@ export default function PortfolioPage() {
                   key={category}
                   variant={filter === category ? "default" : "outline"}
                   onClick={() => setFilter(category)}
+                   className={`${
+                    filter === category ? "bg-[#2563EB] text-white" : "text-[#334155]"
+                  } transition-colors duration-300`} 
                 >
                   {category}
                 </Button>
@@ -349,7 +352,7 @@ export default function PortfolioPage() {
 
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={fadeInUp}>
               <Button size="lg" asChild>
-                <Link href="/contact">
+                <Link href="/contact" className="text-white">
                   Start Your Project
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

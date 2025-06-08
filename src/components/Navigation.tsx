@@ -35,7 +35,7 @@ export function Navigation() {
               className="h-8 w-8 object-contain mr-2 filter-blue"
             />
           </div>
-          {/* <span className="font-bold text-xl">DigitalCraft</span> */}
+          {/* <span className="font-bold text-xl">Shakta Technology</span> */}
         </Link>
 
         {/* Desktop Navigation */}

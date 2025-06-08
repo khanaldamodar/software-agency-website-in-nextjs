@@ -29,25 +29,25 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: "hello@digitalcraft.com",
+    details: "hello@Shakta Technology.com",
     description: "Send us an email anytime",
   },
   {
     icon: Phone,
     title: "Phone",
-    details: "+1 (555) 123-4567",
-    description: "Mon-Fri from 8am to 6pm",
+    details: "+977 9866437014",
+    description: "Mon-Fri from 10am to 5pm",
   },
   {
     icon: MapPin,
     title: "Office",
-    details: "123 Tech Street, Digital City, DC 12345",
+    details: "Kuleshwor-10, Kathmandu",
     description: "Come say hello at our office",
   },
   {
     icon: Clock,
     title: "Working Hours",
-    details: "Mon-Fri: 8am-6pm",
+    details: "Mon-Fri: 10am-5pm",
     description: "Weekend support available",
   },
 ]
@@ -173,7 +173,7 @@ export default function ContactPage() {
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          placeholder="John Doe"
+                          placeholder="Your Name"
                         />
                       </div>
                       <div className="space-y-2">
@@ -261,7 +261,7 @@ export default function ContactPage() {
                       />
                     </div>
 
-                    <Button type="submit" className="w-full" size="lg">
+                    <Button type="submit" className="w-full text-white" size="lg">
                       Send Message
                       <Send className="ml-2 h-4 w-4" />
                     </Button>
@@ -283,7 +283,7 @@ export default function ContactPage() {
                 <CardContent className="space-y-4">
                   <div className="space-y-3">
                     <Button variant="outline" className="w-full justify-start" asChild>
-                      <a href="mailto:hello@digitalcraft.com">
+                      <a href="mailto:hello@Shakta Technology.com">
                         <Mail className="mr-2 h-4 w-4" />
                         Send Email
                       </a>
@@ -340,12 +340,8 @@ export default function ContactPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="w-full h-48 bg-muted rounded-lg flex items-center justify-center">
-                    <div className="text-center space-y-2">
-                      <MapPin className="h-8 w-8 mx-auto text-[#334155]" />
-                      <p className="text-sm text-[#334155]">Interactive map would be here</p>
-                      <p className="text-xs text-[#334155]">123 Tech Street, Digital City, DC 12345</p>
-                    </div>
+                  <div className="w-full h-48 bg-muted rounded-lg flex items-center justify-center overflow-hidden">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d262.5804504447258!2d85.29499470063915!3d27.69111244440382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb194ba1ae7f99%3A0x9cfc3b6f8a3da72!2sShakta%20Technology!5e0!3m2!1sen!2snp!4v1749361107931!5m2!1sen!2snp" width="600" height="450"  allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                   </div>
                 </CardContent>
               </Card>
@@ -355,7 +351,7 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24">
+      <section className="py-24 bg-[#2563EB] text-white">
         <div className="container px-4 md:px-6">
           <motion.div
             className="text-center space-y-8 max-w-4xl mx-auto"
@@ -366,7 +362,7 @@ export default function ContactPage() {
           >
             <motion.div className="space-y-4" variants={fadeInUp}>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Ready to Get Started?</h2>
-              <p className="text-xl text-[#334155]">
+              <p className="text-xl text-white/80">
                 Join the many businesses that trust us to bring their digital visions to life.
               </p>
             </motion.div>
@@ -375,17 +371,17 @@ export default function ContactPage() {
               <motion.div className="text-center space-y-2" variants={fadeInUp}>
                 <Users className="h-8 w-8 mx-auto text-[#2563EB]" />
                 <h3 className="font-semibold">Expert Team</h3>
-                <p className="text-sm text-[#334155]">Work with experienced professionals</p>
+                <p className="text-sm text-white/80">Work with experienced professionals</p>
               </motion.div>
               <motion.div className="text-center space-y-2" variants={fadeInUp}>
                 <MessageSquare className="h-8 w-8 mx-auto text-[#2563EB]" />
                 <h3 className="font-semibold">Clear Communication</h3>
-                <p className="text-sm text-[#334155]">Stay informed throughout the process</p>
+                <p className="text-sm text-white/80">Stay informed throughout the process</p>
               </motion.div>
               <motion.div className="text-center space-y-2" variants={fadeInUp}>
                 <Calendar className="h-8 w-8 mx-auto text-[#2563EB]" />
                 <h3 className="font-semibold">On-Time Delivery</h3>
-                <p className="text-sm text-[#334155]">Projects delivered on schedule</p>
+                <p className="text-sm text-white/80">Projects delivered on schedule</p>
               </motion.div>
             </motion.div>
           </motion.div>
