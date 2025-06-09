@@ -26,25 +26,25 @@ const staggerContainer = {
 const portfolioItems = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "Karnali Province Department",
     category: "Web",
     description:
       "A modern e-commerce platform built with Next.js and Stripe integration. Features include product catalog, shopping cart, payment processing, and admin dashboard.",
-    image: "/placeholder.svg?height=400&width=600",
-    technologies: ["Next.js", "TypeScript", "Stripe", "Prisma", "PostgreSQL"],
-    liveUrl: "#",
+    image: "/websites/pradesh-pramukh.png",
+    technologies: ["Next.js", "TypeScript", "tailwindcss", "Laravel", "MySql"],
+    liveUrl: "https://karnali-pradesh.vercel.app",
     githubUrl: "#",
     featured: true,
   },
   {
     id: 2,
-    title: "Mobile Banking App",
-    category: "Mobile",
+    title: "MAOIST Provionce Website",
+    category: "Web",
     description:
       "Secure banking application with biometric authentication, transaction history, and real-time notifications. Built with React Native.",
-    image: "/placeholder.svg?height=400&width=600",
-    technologies: ["React Native", "TypeScript", "Firebase", "Biometric Auth"],
-    liveUrl: "#",
+    image: "/websites/maiost.png",
+    technologies:  ["Next.js", "TypeScript", "tailwindcss", "Laravel", "MySql"],
+    liveUrl: "https://party-backend-deom.vercel.app/",
     githubUrl: "#",
     featured: true,
   },
@@ -58,7 +58,7 @@ const portfolioItems = [
     technologies: ["React", "D3.js", "Node.js", "MongoDB", "WebSocket"],
     liveUrl: "#",
     githubUrl: "#",
-    featured: true,
+    featured: false,
   },
   {
     id: 4,
@@ -203,12 +203,12 @@ export default function PortfolioPage() {
                           <ExternalLink className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
-                      <Button variant="outline" asChild>
+                      {/* <Button variant="outline" asChild>
                         <Link href={item.githubUrl}>
                           <Github className="mr-2 h-4 w-4" />
                           Code
                         </Link>
-                      </Button>
+                      </Button> */}
                     </div>
                   </div>
 
@@ -291,11 +291,11 @@ export default function PortfolioPage() {
                             <ExternalLink className="h-4 w-4" />
                           </Link>
                         </Button>
-                        <Button size="sm" variant="outline" asChild>
+                        {/* <Button size="sm" variant="outline" asChild>
                           <Link href={item.githubUrl}>
                             <Github className="h-4 w-4" />
                           </Link>
-                        </Button>
+                        </Button> */}
                       </div>
                     </div>
                     <CardContent className="p-6 flex-1 flex flex-col">
