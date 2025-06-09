@@ -160,13 +160,14 @@ export default function AboutPage() {
             </motion.div>
 
             <motion.div variants={fadeInUp}>
-              <Card className="overflow-hidden relative h-100 w-200">
+              <Card className="overflow-hidden relative w-full h-64 sm:h-80 md:h-96 lg:h-[28rem]">
                 <Image
                   src="/ourstory.jpg"
                   alt="Our team working together"
                   fill
-                  className="w-full h-64 lg:h-80 object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority
                 />
               </Card>
             </motion.div>
