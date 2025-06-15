@@ -6,6 +6,7 @@ import "./globals.css"
 import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/footer"
 import { ThemeProvider } from "@/components/theme-provider"
+import Navbar from "@/components/Navbar"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -34,9 +35,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <Navigation />
+          {/* <Navigation /> */}
+          <Navbar/>
           <main>{children}</main>
-          <Footer />
+          <Footer/>
         </ThemeProvider>
       </body>
     </html>

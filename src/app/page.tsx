@@ -8,6 +8,8 @@ import { ArrowRight, Code, Smartphone, Palette, Zap, Star, ChevronLeft, ChevronR
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import Hero from "@/components/Hero"
+import Blog from "@/components/Blog"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -151,85 +153,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/10 via-background to-secondary/10">
-        {/* Animated Background */}
-        <div className="absolute inset-0 overflow-hidden">
-          <motion.div
-            className="absolute -top-40 -right-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl"
-            animate={{
-              x: [0, 100, 0],
-              y: [0, -100, 0],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "linear",
-            }}
-          />
-          <motion.div
-            className="absolute -bottom-40 -left-40 w-80 h-80 bg-secondary/20 rounded-full blur-3xl"
-            animate={{
-              x: [0, -100, 0],
-              y: [0, 100, 0],
-            }}
-            transition={{
-              duration: 25,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "linear",
-            }}
-          />
-        </div>
-
-        <div className="container px-4 md:px-6 relative z-10">
-          <motion.div
-            className="flex flex-col items-center space-y-8 text-center"
-            initial="initial"
-            animate="animate"
-            variants={staggerContainer}
-          >
-            <motion.h1
-              className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
-              variants={fadeInUp}
-            >
-              Building Digital
-              <br />
-              <motion.span
-                className="text-[#2563EB]"
-                animate={{ opacity: [1, 0.5, 1] }}
-                transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-              >
-                Experiences
-              </motion.span>
-              <br />
-              That Matter
-            </motion.h1>
-
-            <motion.p className="mx-auto max-w-[700px] text-[#334155] md:text-xl" variants={fadeInUp}>
-              We transform ideas into powerful software solutions that drive business growth and user engagement.
-            </motion.p>
-
-            <motion.div variants={fadeInUp}>
-              <Button size="lg" className="group" asChild>
-                <Link href="/contact" className="text-white">
-                  Get Started
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </Button>
-            </motion.div>
-          </motion.div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-        >
-          <div className="w-6 h-10 border-2 border-[#334155] rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-[#334155] rounded-full mt-2"></div>
-          </div>
-        </motion.div>
-      </section>
+    <Hero/>
 
       {/* Intro Section */}
       <section className="py-24 bg-[#94a3b8]/50">
@@ -449,6 +373,8 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+      
+      <Blog/>
 
       {/* CTA Section */}
       <section className="py-24 bg-[#2563EB] text-[#FFFFFF]">
