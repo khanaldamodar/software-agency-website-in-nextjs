@@ -373,7 +373,7 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-      
+
       <Blog/>
 
       {/* CTA Section */}
