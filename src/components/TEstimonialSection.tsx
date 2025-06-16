@@ -259,7 +259,7 @@ const TestimonialsSection = () => {
               variant="outline"
               size="icon"
               onClick={prevTestimonial}
-              className="border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white transition-all duration-300"
+              className="border-gray-700 text-black hover:bg-gray-800 hover:text-white transition-all duration-300"
             >
               <ChevronLeft className="w-5 h-5" />
             </Button>
@@ -267,7 +267,7 @@ const TestimonialsSection = () => {
               variant="outline"
               size="icon"
               onClick={nextTestimonial}
-              className="border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white transition-all duration-300"
+              className="border-gray-700 text-black hover:bg-gray-800 hover:text-white transition-all duration-300"
             >
               <ChevronRight className="w-5 h-5" />
             </Button>

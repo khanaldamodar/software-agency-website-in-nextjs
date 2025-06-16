@@ -198,7 +198,7 @@ const FAQSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white transition-all duration-300 px-8 py-3"
+                className="border-gray-700 text-black hover:bg-gray-800 hover:text-white transition-all duration-300 px-8 py-3"
                 asChild
               >
                 <Link href="/faqs">View All FAQs</Link>

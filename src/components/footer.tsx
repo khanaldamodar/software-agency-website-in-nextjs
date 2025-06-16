@@ -121,7 +121,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="relative w-32 h-">
+                <div className="relative w-42 h-20">
                 <Image
                   src={"/logo.png"}
                   fill

@@ -160,7 +160,7 @@ export default function HomePage() {
     <Hero/>
 
       {/* Intro Section */}
-      <section className="py-24 bg-[#94a3b8]/50">
+      <section className="py-24 bg-gradient-to-b from-gray-950 to-gray-900">
         <div className="container container-centered px-4 md:px-6">
           <motion.div
             className="text-center space-y-12"
@@ -170,10 +170,10 @@ export default function HomePage() {
             variants={staggerContainer}
           >
             <motion.div className="space-y-4" variants={fadeInUp}>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                We Transform Ideas Into Reality
+              <h2 className="text-white text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                We <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Transform</span> Ideas Into <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Reality</span>
               </h2>
-              <p className="mx-auto max-w-[700px] text-[#334155] md:text-xl">
+              <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl">
                 With over a decade of experience, we specialize in creating digital solutions that make a difference.
               </p>
             </motion.div>
