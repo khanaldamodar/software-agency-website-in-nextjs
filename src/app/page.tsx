@@ -10,6 +10,10 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 import Hero from "@/components/Hero"
 import Blog from "@/components/Blog"
+import ServicesShowcase from "@/components/ServicesShowcase"
+import ProjectsShowcase from "@/components/ProjectsShowcase"
+import FAQSection from "@/components/FAQSection"
+import TestimonialsSection from "@/components/TEstimonialSection"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -198,8 +202,13 @@ export default function HomePage() {
         </div>
       </section>
 
+      <ServicesShowcase/>
+      <ProjectsShowcase/>
+      <FAQSection/>
+      <TestimonialsSection/>
+
       {/* Services Preview */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="container px-4 md:px-6">
           <motion.div
             className="text-center space-y-12"
@@ -241,10 +250,10 @@ export default function HomePage() {
             </motion.div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Portfolio Showcase */}
-      <section className="py-24 bg-[#94a3b8]/50">
+      {/* <section className="py-24 bg-[#94a3b8]/50">
         <div className="container px-4 md:px-6">
           <motion.div
             className="space-y-12"
@@ -318,10 +327,10 @@ export default function HomePage() {
             </motion.div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="container px-4 md:px-6">
           <motion.div
             className="text-center space-y-12"
@@ -372,12 +381,12 @@ export default function HomePage() {
             </motion.div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
-      <Blog/>
+      {/* <Blog/> */}
 
       {/* CTA Section */}
-      <section className="py-24 bg-[#2563EB] text-[#FFFFFF]">
+      {/* <section className="py-24 bg-[#2563EB] text-[#FFFFFF]">
         <div className="container px-4 md:px-6">
           <motion.div
             className="text-center space-y-8"
@@ -413,7 +422,7 @@ export default function HomePage() {
             </motion.div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

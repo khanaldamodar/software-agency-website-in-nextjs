@@ -4,7 +4,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 
 import { Navigation } from "@/components/Navigation"
-import { Footer } from "@/components/footer"
+import  Footer  from "@/components/footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/Navbar"
 
