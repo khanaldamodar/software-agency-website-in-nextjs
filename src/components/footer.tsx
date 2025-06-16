@@ -51,7 +51,7 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/khanaldamodar", label: "GitHub" },
+    { icon: Github, href: "https://github.com/", label: "GitHub" },
     {
       icon: Facebook,
       href: "https://www.facebook.com/Shakta Technology",
@@ -59,12 +59,12 @@ const Footer = () => {
     },
     {
       icon: Linkedin,
-      href: "https://github.com/khanaldamodar",
+      href: "https://github.com/",
       label: "LinkedIn",
     },
     {
       icon: Instagram,
-      href: "https://www.instagram.com/wired_yatra/",
+      href: "https://www.instagram.com",
       label: "Instagram",
     },
   ];
