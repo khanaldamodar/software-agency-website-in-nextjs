@@ -1,19 +1,18 @@
-"use client"
-
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ExternalLink, Github, ArrowRight } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { useState } from "react"
+"use client";
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6 },
-}
+};
 
 const staggerContainer = {
   animate: {
@@ -21,7 +20,7 @@ const staggerContainer = {
       staggerChildren: 0.1,
     },
   },
-}
+};
 
 const portfolioItems = [
   {
@@ -43,7 +42,7 @@ const portfolioItems = [
     description:
       "Secure banking application with biometric authentication, transaction history, and real-time notifications. Built with React Native.",
     image: "/websites/maiost.png",
-    technologies:  ["Next.js", "TypeScript", "tailwindcss", "Laravel", "MySql"],
+    technologies: ["Next.js", "TypeScript", "tailwindcss", "Laravel", "MySql"],
     liveUrl: "https://party-backend-deom.vercel.app/",
     githubUrl: "#",
     featured: true,
@@ -96,39 +95,169 @@ const portfolioItems = [
     githubUrl: "#",
     featured: false,
   },
-  // {
-  //   id: 7,
-  //   title: "Learning Management System",
-  //   category: "Web",
-  //   description:
-  //     "Educational platform with course creation, student progress tracking, and interactive learning tools.",
-  //   image: "/placeholder.svg?height=400&width=600",
-  //   technologies: ["Next.js", "Prisma", "PostgreSQL", "Stripe", "Video.js"],
-  //   liveUrl: "#",
-  //   githubUrl: "#",
-  //   featured: false,
-  // },
-  // {
-  //   id: 8,
-  //   title: "Real Estate Platform",
-  //   category: "Web",
-  //   description: "Property listing and management platform with advanced search, virtual tours, and agent tools.",
-  //   image: "/placeholder.svg?height=400&width=600",
-  //   technologies: ["React", "Node.js", "MongoDB", "Mapbox", "AWS S3"],
-  //   liveUrl: "#",
-  //   githubUrl: "#",
-  //   featured: false,
-  // },
-]
+];
+
+const totalProjects = [
+  {
+    id: 1,
+    name: "ChandraGiri Municipality",
+    category: "Bagmati",
+    image: "/websites/chandragiri.png",
+  },
+  {
+    id: 2,
+    namw: "Samppati Suddhikaran Kendra",
+    category: "Bagmati",
+    image: "/websites/sampati.png",
+  },
+  {
+    id: 3,
+    name: "Soil Testing Lab",
+    category: "Bagmati",
+    image: "/websites/soil-testing.png",
+  },
+  // ? Gandaki Pradesh
+  {
+    id: 4,
+    name: "Sundar bazar Municipality",
+    category: "Gandaki",
+    image: "/websites/sundar-bazar.png",
+  },
+  {
+    id: 5,
+    name: "Dudh Pokhari Muncipality",
+    category: "Gandaki",
+    image: "/websites/dudh-pokhari.png",
+  },
+  {
+    id: 6,
+    name: "Kusma Municipality",
+    category: "Gandaki",
+    image: "/websites/kusma.png",
+  },
+  // ? Lumbini Pradesh
+  {
+    id: 7,
+    name: "MOAIST Lumbini",
+    category: "Lumbini",
+    image: "/websites/lumbini.png",
+  },
+  {
+    id: 8,
+    name: "thakurdada Municipality",
+    category: "Lumbini",
+    image: "/websites/thakurdada.png",
+  },
+
+  // ? Karnali Pradesh
+  {
+    id: 9,
+    name: "PraDESH Pramukh",
+    category: "Karnali",
+    image: "/websites/pradesh-pramukh.png",
+  },
+  {
+    id: 10,
+    name: "Dolpo Buddha Gaunpalika",
+    category: "Karnali",
+    image: "/websites/project-3.png",
+  },
+  {
+    id: 11,
+    name: "She-Foksundo Gaunpalika",
+    category: "Karnali",
+    image: "/websites/project-5.png",
+  },
+  {
+    id: 12,
+    name: "Dilasaini Gaupalika",
+    category: "Karnali",
+    image: "/websites/dilasaini.png",
+  },
+  {
+    id: 13,
+    name: "Tatopani Gaunpalika",
+    category: "Karnali",
+    image: "/websites/karnali-pradesh.png",
+  },
+
+  // ? Sudurpashim
+  {
+    id: 14,
+    name: "Dhangadi Amha Municipality",
+    category: "Sudurpashim",
+    image: "/websites/karnali-pradesh.png",
+  },
+  {
+    id: 15,
+    name: "AmarDadi Nagarpalika",
+    category: "Sudurpashim",
+    image: "/websites/dhangadi-amha.png",
+  },
+  {
+    id: 16,
+    name: "Bhageshwor Municipality",
+    category: "Sudurpashim",
+    image: "/websites/bhimdatta.png",
+  },
+  {
+    id: 17,
+    name: "गन्यापधुरा गाउँपालिका",
+    category: "Sudurpashim",
+    image: "/websites/bhimdatta.png",
+  },
+  {
+    id: 18,
+    name: "सिगास गाउँपालिका",
+    category: "Sudurpashim",
+    image: "/websites/bhimdatta.png",
+  },
+  {
+    id: 19,
+    name: "के.आई.सिंह गाउँपालिका",
+    category: "Sudurpashim",
+    image: "/websites/bhimdatta.png",
+  },
+  {
+    id: 20,
+    name: "तुर्माखाँद गाउँपालिका",
+    category: "Sudurpashim",
+    image: "/websites/bhimdatta.png",
+  },
+  {
+    id: 21,
+    name: "Koshi Pradesh",
+    category: "Sudurpashim",
+    image: "/websites/bhimdatta.png",
+  },
+
+  //  ? Bagmati
+  {
+    id: 22,
+    name: "बाह्रविसे नगरपालिका",
+    catergory: "Bagmati",
+    image: "/websites/bhimdatta.png",
+  },
+  {
+    id: 23,
+    name: "लिसंखु पाखर गाउँपालिका",
+    category: "Bagmati",
+    image: "/websites/bhimdatta.png",
+  },
+
+];
 
 export default function PortfolioPage() {
-  const [filter, setFilter] = useState("All")
-  const [showAll, setShowAll] = useState(false)
+  const [filter, setFilter] = useState("All");
+  const [showAll, setShowAll] = useState(false);
 
-  const filteredItems = filter === "All" ? portfolioItems : portfolioItems.filter((item) => item.category === filter)
+  const filteredItems =
+    filter === "All"
+      ? portfolioItems
+      : portfolioItems.filter((item) => item.category === filter);
 
-  const displayedItems = showAll ? filteredItems : filteredItems.slice(0, 6)
-  const featuredItems = portfolioItems.filter((item) => item.featured)
+  const displayedItems = showAll ? filteredItems : filteredItems.slice(0, 6);
+  const featuredItems = portfolioItems.filter((item) => item.featured);
 
   return (
     <div className="min-h-screen pt-16">
@@ -145,10 +274,12 @@ export default function PortfolioPage() {
               <Badge variant="outline" className="mb-4">
                 Our Portfolio
               </Badge>
-              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">Our Recent Work</h1>
+              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+                Our Recent Work
+              </h1>
               <p className="text-xl text-[#334155]">
-                Explore our portfolio of successful projects and see how we've helped businesses achieve their digital
-                goals.
+                Explore our portfolio of successful projects and see how we've
+                helped businesses achieve their digital goals.
               </p>
             </motion.div>
           </motion.div>
@@ -166,9 +297,12 @@ export default function PortfolioPage() {
             variants={staggerContainer}
           >
             <motion.div className="text-center space-y-4" variants={fadeInUp}>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Featured Projects</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                Featured Projects
+              </h2>
               <p className="mx-auto max-w-[700px] text-[#334155] md:text-xl">
-                Here are some of our most successful and innovative projects that showcase our expertise.
+                Here are some of our most successful and innovative projects
+                that showcase our expertise.
               </p>
             </motion.div>
 
@@ -181,7 +315,11 @@ export default function PortfolioPage() {
                     index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
                   }`}
                 >
-                  <div className={`space-y-6 ${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
+                  <div
+                    className={`space-y-6 ${
+                      index % 2 === 1 ? "lg:col-start-2" : ""
+                    }`}
+                  >
                     <div className="space-y-4">
                       <Badge variant="secondary">{item.category}</Badge>
                       <h3 className="text-2xl font-bold">{item.title}</h3>
@@ -212,7 +350,11 @@ export default function PortfolioPage() {
                     </div>
                   </div>
 
-                  <div className={`${index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}`}>
+                  <div
+                    className={`${
+                      index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""
+                    }`}
+                  >
                     <Card className="overflow-hidden group hover:shadow-lg transition-all duration-300">
                       <Image
                         src={item.image || "/placeholder.svg"}
@@ -241,28 +383,39 @@ export default function PortfolioPage() {
             variants={staggerContainer}
           >
             <motion.div className="text-center space-y-4" variants={fadeInUp}>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">All Projects</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                All Projects
+              </h2>
               <p className="mx-auto max-w-[700px] text-[#334155] md:text-xl">
-                Browse through our complete portfolio of projects across different categories.
+                Browse through our complete portfolio of projects across
+                different categories.
               </p>
             </motion.div>
 
-            <motion.div className="flex justify-center space-x-4" variants={fadeInUp}>
+            <motion.div
+              className="flex justify-center space-x-4"
+              variants={fadeInUp}
+            >
               {["All", "Web", "Mobile"].map((category) => (
                 <Button
                   key={category}
                   variant={filter === category ? "default" : "outline"}
                   onClick={() => setFilter(category)}
-                   className={`${
-                    filter === category ? "bg-[#2563EB] text-white" : "text-[#334155]"
-                  } transition-colors duration-300`} 
+                  className={`${
+                    filter === category
+                      ? "bg-[#2563EB] text-white"
+                      : "text-[#334155]"
+                  } transition-colors duration-300`}
                 >
                   {category}
                 </Button>
               ))}
             </motion.div>
 
-            <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" variants={staggerContainer}>
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              variants={staggerContainer}
+            >
               {displayedItems.map((item) => (
                 <motion.div
                   key={item.id}
@@ -299,11 +452,19 @@ export default function PortfolioPage() {
                       </div>
                     </div>
                     <CardContent className="p-6 flex-1 flex flex-col">
-                      <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                      <p className="text-[#334155] mb-4 flex-1">{item.description}</p>
+                      <h3 className="text-xl font-semibold mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-[#334155] mb-4 flex-1">
+                        {item.description}
+                      </p>
                       <div className="flex flex-wrap gap-1">
                         {item.technologies.slice(0, 3).map((tech) => (
-                          <Badge key={tech} variant="outline" className="text-xs">
+                          <Badge
+                            key={tech}
+                            variant="outline"
+                            className="text-xs"
+                          >
                             {tech}
                           </Badge>
                         ))}
@@ -321,7 +482,11 @@ export default function PortfolioPage() {
 
             {!showAll && filteredItems.length > 6 && (
               <motion.div className="text-center" variants={fadeInUp}>
-                <Button onClick={() => setShowAll(true)} variant="outline" size="lg">
+                <Button
+                  onClick={() => setShowAll(true)}
+                  variant="outline"
+                  size="lg"
+                >
                   Show More Projects
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -346,11 +511,15 @@ export default function PortfolioPage() {
                 Ready to Start Your Project?
               </h2>
               <p className="text-xl text-[#334155]">
-                Let's create something amazing together. Get in touch to discuss your project.
+                Let's create something amazing together. Get in touch to discuss
+                your project.
               </p>
             </motion.div>
 
-            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={fadeInUp}>
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              variants={fadeInUp}
+            >
               <Button size="lg" asChild>
                 <Link href="/contact" className="text-white">
                   Start Your Project
@@ -365,5 +534,5 @@ export default function PortfolioPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
