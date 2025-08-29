@@ -43,28 +43,28 @@ const Footer = () => {
     ],
     resources: [
       { name: "Portfolio", href: "/portfolio" },
-      { name: "Case Studies", href: "/portfolio#case-studies" },
+      // { name: "Case Studies", href: "/portfolio#case-studies" },
       { name: "FAQs", href: "/faqs" },
-      { name: "Support", href: "/support" },
-      { name: "Documentation", href: "/docs" },
+      // { name: "Support", href: "/support" },
+      // { name: "Documentation", href: "/docs" },
     ],
   };
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/", label: "GitHub" },
+    // { icon: Github, href: "https://github.com/", label: "GitHub" },
     {
       icon: Facebook,
-      href: "https://www.facebook.com/Shakta Technology",
+      href: "https://www.facebook.com/profile.php?id=61575212213560",
       label: "Facebook",
     },
     {
       icon: Linkedin,
-      href: "https://github.com/",
+      href: "https://www.linkedin.com/company/shaktatechnology/",
       label: "LinkedIn",
     },
     {
       icon: Instagram,
-      href: "https://www.instagram.com",
+      href: "https://www.instagram.com/shaktatec/",
       label: "Instagram",
     },
   ];
@@ -219,15 +219,15 @@ const Footer = () => {
             <div className="space-y-4 mb-6">
               <div className="flex items-center space-x-3 text-gray-400">
                 <Mail className="w-4 h-4 text-cyan-400" />
-                <span>hello@Shakta Technology.com</span>
+                <span>shaktatechnology@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <Phone className="w-4 h-4 text-cyan-400" />
-                <span>+977 9866437014</span>
+                <span>01-5923097</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <MapPin className="w-4 h-4 text-cyan-400" />
-                <span>Kathmandu Nepal</span>
+                <span>Kuleshwor Kathmandu Nepal</span>
               </div>
             </div>
             <h4 className="text-md font-medium text-white mb-3">Resources</h4>
@@ -262,8 +262,7 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <div className="text-gray-400 text-sm mb-4 sm:mb-0">
-            © 2025 Shakta Technology. All rights reserved. Crafted with ❤️ for the
-            future.
+            © 2025 Shakta Technology. All rights reserved.
           </div>
           <div className="flex items-center space-x-6">
             <Link

@@ -166,7 +166,7 @@ const totalProjects = [
     id: 11,
     name: "She-Foksundo Gaunpalika",
     category: "Karnali",
-    image: "/websites/project-5.png",
+    image: "/clientlogo/sefoksundo.jpg",
   },
   {
     id: 12,
@@ -260,7 +260,7 @@ export default function PortfolioPage() {
   const featuredItems = portfolioItems.filter((item) => item.featured);
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen pt-16 font-poppins">
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container px-4 md:px-6">
@@ -326,21 +326,21 @@ export default function PortfolioPage() {
                       <p className="text-[#334155]">{item.description}</p>
                     </div>
 
-                    <div className="flex flex-wrap gap-2">
+                    {/* <div className="flex flex-wrap gap-2">
                       {item.technologies.map((tech) => (
                         <Badge key={tech} variant="outline">
                           {tech}
                         </Badge>
                       ))}
-                    </div>
+                    </div> */}
 
                     <div className="flex space-x-4">
-                      <Button asChild>
+                      {/* <Button asChild>
                         <Link href={item.liveUrl} className="text-white">
                           View Live
                           <ExternalLink className="ml-2 h-4 w-4" />
                         </Link>
-                      </Button>
+                      </Button> */}
                       {/* <Button variant="outline" asChild>
                         <Link href={item.githubUrl}>
                           <Github className="mr-2 h-4 w-4" />
@@ -392,7 +392,7 @@ export default function PortfolioPage() {
               </p>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               className="flex justify-center space-x-4"
               variants={fadeInUp}
             >
@@ -410,7 +410,7 @@ export default function PortfolioPage() {
                   {category}
                 </Button>
               ))}
-            </motion.div>
+            </motion.div> */}
 
             <motion.div
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -438,18 +438,14 @@ export default function PortfolioPage() {
                       <div className="absolute top-4 right-4">
                         <Badge variant="secondary">{item.category}</Badge>
                       </div>
-                      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                      {/* <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                         <Button size="sm" asChild>
                           <Link href={item.liveUrl}>
                             <ExternalLink className="h-4 w-4" />
                           </Link>
                         </Button>
-                        {/* <Button size="sm" variant="outline" asChild>
-                          <Link href={item.githubUrl}>
-                            <Github className="h-4 w-4" />
-                          </Link>
-                        </Button> */}
-                      </div>
+                      
+                      </div> */}
                     </div>
                     <CardContent className="p-6 flex-1 flex flex-col">
                       <h3 className="text-xl font-semibold mb-2">
@@ -458,7 +454,7 @@ export default function PortfolioPage() {
                       <p className="text-[#334155] mb-4 flex-1">
                         {item.description}
                       </p>
-                      <div className="flex flex-wrap gap-1">
+                      {/* <div className="flex flex-wrap gap-1">
                         {item.technologies.slice(0, 3).map((tech) => (
                           <Badge
                             key={tech}
@@ -473,7 +469,7 @@ export default function PortfolioPage() {
                             +{item.technologies.length - 3}
                           </Badge>
                         )}
-                      </div>
+                      </div> */}
                     </CardContent>
                   </Card>
                 </motion.div>

@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Poppins } from "next/font/google"
 import "./globals.css"
 
 import { Navigation } from "@/components/Navigation"
@@ -9,6 +9,11 @@ import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/Navbar"
 
 const inter = Inter({ subsets: ["latin"] })
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '700'], 
+  variable: '--font-poppins', // Optional for CSS variables
+});
 
 export const metadata: Metadata = {
   title: "Shakta Technology - Building Experiences That Matter",
@@ -32,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={poppins.className}>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {/* <Navigation /> */}

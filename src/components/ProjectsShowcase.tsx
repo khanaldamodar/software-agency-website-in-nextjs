@@ -15,62 +15,48 @@ const ProjectsShowcase = () => {
     threshold: 0.1,
   });
 
+  // const projects = [
+  //   {
+  //     id: 'ecommerce-platform',
+  //     title: 'E-commerce Platform',
+  //     description: 'Modern e-commerce solution with advanced features including real-time inventory, payment processing, and analytics dashboard.',
+  //     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=center',
+  //     tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+  //     category: 'Web Development',
+  //     color: 'from-blue-400 to-cyan-400',
+  //   },
+  // ];
   const projects = [
-    {
-      id: 'ecommerce-platform',
-      title: 'E-commerce Platform',
-      description: 'Modern e-commerce solution with advanced features including real-time inventory, payment processing, and analytics dashboard.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=center',
-      tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-      category: 'Web Development',
-      color: 'from-blue-400 to-cyan-400',
-    },
-    {
-      id: 'mobile-banking',
-      title: 'Mobile Banking App',
-      description: 'Secure and intuitive mobile banking application with biometric authentication and real-time transaction monitoring.',
-      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop&crop=center',
-      tags: ['React Native', 'Node.js', 'MongoDB', 'Biometrics'],
-      category: 'Mobile Development',
-      color: 'from-purple-400 to-pink-400',
-    },
-    {
-      id: 'ai-dashboard',
-      title: 'AI Analytics Dashboard',
-      description: 'Intelligent dashboard for data visualization and predictive analytics using machine learning algorithms.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center',
-      tags: ['Next.js', 'Python', 'TensorFlow', 'D3.js'],
-      category: 'AI & Analytics',
-      color: 'from-green-400 to-blue-400',
-    },
-    {
-      id: 'saas-platform',
-      title: 'SaaS Management Platform',
-      description: 'Comprehensive SaaS platform for project management with team collaboration and advanced reporting features.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center',
-      tags: ['Vue.js', 'Laravel', 'MySQL', 'Docker'],
-      category: 'Enterprise',
-      color: 'from-orange-400 to-red-400',
-    },
-    {
-      id: 'blockchain-wallet',
-      title: 'Crypto Wallet',
-      description: 'Secure cryptocurrency wallet with multi-chain support and DeFi integration for modern digital assets.',
-      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop&crop=center',
-      tags: ['React', 'Web3.js', 'Solidity', 'MetaMask'],
-      category: 'Blockchain',
-      color: 'from-yellow-400 to-orange-400',
-    },
-    {
-      id: 'healthcare-app',
-      title: 'Healthcare Management',
-      description: 'Patient management system with telemedicine capabilities and secure health record management.',
-      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop&crop=center',
-      tags: ['Angular', 'Spring Boot', 'PostgreSQL', 'WebRTC'],
-      category: 'Healthcare',
-      color: 'from-indigo-400 to-purple-400',
-    },
-  ];
+ 
+  // ? Karnali Pradesh
+  {
+    id: 9,
+          description: 'Modern e-commerce solution with advanced features including real-time inventory, payment processing, and analytics dashboard.',
+
+    title: "Pradesh Pramukh",
+    category: "Karnali",
+    image: "/websites/pradesh-pramukh.png",
+    color: 'from-blue-400 to-cyan-400',
+  },
+  {
+    id: 10,
+    title: "Dolpo Buddha Gaunpalika",
+    category: "Karnali",
+          description: 'Modern e-commerce solution with advanced features including real-time inventory, payment processing, and analytics dashboard.',
+
+    image: "/websites/project-3.png",
+    color: 'from-blue-400 to-cyan-400',
+  },
+  {
+    id: 11,
+    title: "She-Foksundo Gaunpalika",
+    category: "Karnali",
+          description: 'Modern e-commerce solution with advanced features including real-time inventory, payment processing, and analytics dashboard.',
+
+    image: "/clientlogo/sefoksundo.jpg",
+    color: 'from-blue-400 to-cyan-400',
+  },
+];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -167,22 +153,7 @@ const ProjectsShowcase = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
 
                     {/* Project Links */}
-                    <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <motion.button
-                        className="w-8 h-8 bg-gray-900/80 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-cyan-400 hover:text-gray-900 transition-colors duration-300"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <Github className="w-4 h-4" />
-                      </motion.button>
-                      <motion.button
-                        className="w-8 h-8 bg-gray-900/80 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-cyan-400 hover:text-gray-900 transition-colors duration-300"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                      </motion.button>
-                    </div>
+                   
 
                     {/* Category Badge */}
                     <div className="absolute bottom-4 left-4">
@@ -206,7 +177,7 @@ const ProjectsShowcase = () => {
                     </p>
 
                     {/* Tech Stack */}
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    {/* <div className="flex flex-wrap gap-2 mb-4">
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
@@ -215,16 +186,16 @@ const ProjectsShowcase = () => {
                           {tag}
                         </span>
                       ))}
-                    </div>
+                    </div> */}
 
                     {/* Learn More Link */}
-                    <motion.div
+                    {/* <motion.div
                       className="flex items-center space-x-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 cursor-pointer"
                       whileHover={{ x: 5 }}
                     >
                       <span className="text-sm font-medium">View Details</span>
                       <ArrowRight className="w-4 h-4" />
-                    </motion.div>
+                    </motion.div> */}
                   </CardContent>
                 </div>
               </Card>

@@ -29,19 +29,19 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: "hello@Shakta Technology.com",
+    details: "shaktatechnology495@gmail.com",
     description: "Send us an email anytime",
   },
   {
     icon: Phone,
     title: "Phone",
-    details: "+977 9866437014",
+    details: "01-5923097",
     description: "Mon-Fri from 10am to 5pm",
   },
   {
     icon: MapPin,
     title: "Office",
-    details: "Kuleshwor-10, Kathmandu",
+    details: "Kuleshwor Kathmandu, Nepal",
     description: "Come say hello at our office",
   },
   {
@@ -57,8 +57,6 @@ const services = [
   "Mobile App Development",
   "UI/UX Design",
   "Backend Development",
-  "Cloud Solutions",
-  "Consulting",
   "Other",
 ]
 
@@ -238,11 +236,11 @@ export default function ContactPage() {
                         className="w-full px-3 py-2 border border-input bg-background rounded-md text-sm"
                       >
                         <option value="">Select budget range</option>
-                        <option value="under-5k">Under $5,000</option>
-                        <option value="5k-10k">$5,000 - $10,000</option>
-                        <option value="10k-25k">$10,000 - $25,000</option>
-                        <option value="25k-50k">$25,000 - $50,000</option>
-                        <option value="over-50k">Over $50,000</option>
+                        <option value="under-5k">Under Rs.10,000</option>
+                        <option value="5k-10k">Rs.10,000 - Rs.30,000</option>
+                        <option value="10k-25k">Rs.30,000 - Rs.60,000</option>
+                        <option value="25k-50k">Rs.60,000 - Rs.1,00,000</option>
+                        <option value="over-50k">Over Rs.1,00,000</option>
                       </select>
                     </div>
 
@@ -283,13 +281,13 @@ export default function ContactPage() {
                 <CardContent className="space-y-4">
                   <div className="space-y-3">
                     <Button variant="outline" className="w-full justify-start" asChild>
-                      <a href="mailto:hello@Shakta Technology.com">
+                      <a href="mailto:shaktatechnology495@gmail.com">
                         <Mail className="mr-2 h-4 w-4" />
                         Send Email
                       </a>
                     </Button>
                     <Button variant="outline" className="w-full justify-start" asChild>
-                      <a href="tel:+15551234567">
+                      <a href="tel:015923097">
                         <Phone className="mr-2 h-4 w-4" />
                         Call Us
                       </a>
@@ -351,7 +349,7 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-[#2563EB] text-white">
+      <section className="py-24 bg-[#dadada]   text-black">
         <div className="container px-4 md:px-6">
           <motion.div
             className="text-center space-y-8 max-w-4xl mx-auto"
@@ -362,7 +360,7 @@ export default function ContactPage() {
           >
             <motion.div className="space-y-4" variants={fadeInUp}>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Ready to Get Started?</h2>
-              <p className="text-xl text-white/80">
+              <p className="text-xl text-black/80">
                 Join the many businesses that trust us to bring their digital visions to life.
               </p>
             </motion.div>
@@ -371,17 +369,17 @@ export default function ContactPage() {
               <motion.div className="text-center space-y-2" variants={fadeInUp}>
                 <Users className="h-8 w-8 mx-auto text-[#2563EB]" />
                 <h3 className="font-semibold">Expert Team</h3>
-                <p className="text-sm text-white/80">Work with experienced professionals</p>
+                <p className="text-sm text-black/80">Work with experienced professionals</p>
               </motion.div>
               <motion.div className="text-center space-y-2" variants={fadeInUp}>
                 <MessageSquare className="h-8 w-8 mx-auto text-[#2563EB]" />
                 <h3 className="font-semibold">Clear Communication</h3>
-                <p className="text-sm text-white/80">Stay informed throughout the process</p>
+                <p className="text-sm text-black/80">Stay informed throughout the process</p>
               </motion.div>
               <motion.div className="text-center space-y-2" variants={fadeInUp}>
                 <Calendar className="h-8 w-8 mx-auto text-[#2563EB]" />
                 <h3 className="font-semibold">On-Time Delivery</h3>
-                <p className="text-sm text-white/80">Projects delivered on schedule</p>
+                <p className="text-sm text-black/80">Projects delivered on schedule</p>
               </motion.div>
             </motion.div>
           </motion.div>

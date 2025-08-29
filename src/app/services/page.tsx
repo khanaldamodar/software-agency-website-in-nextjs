@@ -61,34 +61,6 @@ const services = [
     features: ["RESTful APIs", "GraphQL", "Database Design", "Microservices"],
     price: "Starting at $3,000",
   },
-  {
-    icon: Cloud,
-    title: "Cloud Solutions",
-    description: "Cloud infrastructure setup and deployment services",
-    features: ["AWS/Azure/GCP", "DevOps", "CI/CD Pipelines", "Monitoring"],
-    price: "Starting at $2,000",
-  },
-  {
-    icon: Shield,
-    title: "Security Audits",
-    description: "Comprehensive security assessments and vulnerability testing",
-    features: ["Penetration Testing", "Code Review", "Security Consulting", "Compliance"],
-    price: "Starting at $1,000",
-  },
-  {
-    icon: Zap,
-    title: "Performance Optimization",
-    description: "Speed up your applications and improve user experience",
-    features: ["Code Optimization", "Database Tuning", "CDN Setup", "Monitoring"],
-    price: "Starting at $800",
-  },
-  {
-    icon: BarChart,
-    title: "Analytics & Insights",
-    description: "Data-driven insights to help you make better business decisions",
-    features: ["Google Analytics", "Custom Dashboards", "A/B Testing", "Reporting"],
-    price: "Starting at $600",
-  },
 ]
 
 const process = [
@@ -193,7 +165,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 bg-[#94a3b8]/50">
+      <section className="py-24 bg-[#FBF9D1]">
         <div className="container px-4 md:px-6">
           <motion.div
             className="text-center space-y-12"
@@ -202,7 +174,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             variants={staggerContainer}
           >
-            <motion.div className="space-y-4" variants={fadeInUp}>
+            <motion.div className="space-y-4 " variants={fadeInUp} >
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Process</h2>
               <p className="mx-auto max-w-[700px] text-[#334155] md:text-xl">
                 We follow a proven process to ensure your project is delivered on time, within budget, and exceeds

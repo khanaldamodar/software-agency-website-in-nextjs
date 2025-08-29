@@ -1,18 +1,27 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Users, Target, Award, Heart, Linkedin, Twitter, Github, ArrowRight } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Users,
+  Target,
+  Award,
+  Heart,
+  Linkedin,
+  Twitter,
+  Github,
+  ArrowRight,
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6 },
-}
+};
 
 const staggerContainer = {
   animate: {
@@ -20,7 +29,7 @@ const staggerContainer = {
       staggerChildren: 0.1,
     },
   },
-}
+};
 
 const values = [
   {
@@ -47,11 +56,11 @@ const values = [
     description:
       "We are passionate about technology and love creating digital experiences that make a real difference.",
   },
-]
+];
 
 const team = [
   {
-    name: "Alex Johnson",
+    name: "Sisir Dhital",
     role: "Founder & CEO",
     image: "/placeholder.svg?height=300&width=300",
     bio: "Full-stack developer with 10+ years of experience in building scalable web applications.",
@@ -62,9 +71,31 @@ const team = [
     },
   },
   {
-    name: "Sarah Chen",
-    role: "Lead Designer",
+    name: "Shyam Kunwar",
+    role: "Founder & CEO",
     image: "/placeholder.svg?height=300&width=300",
+    bio: "Full-stack developer with 10+ years of experience in building scalable web applications.",
+    social: {
+      linkedin: "#",
+      twitter: "#",
+      github: "#",
+    },
+  },
+  {
+    name: "Tirtha Pokhrel",
+    role: "Founder & CEO",
+    image: "/placeholder.svg?height=300&width=300",
+    bio: "Full-stack developer with 10+ years of experience in building scalable web applications.",
+    social: {
+      linkedin: "#",
+      twitter: "#",
+      github: "#",
+    },
+  },
+  {
+    name: "Aashish Sapkota",
+    role: "Senior DotNet Developer",
+    image: "/employees/2.jpg",
     bio: "Creative designer specializing in user experience and interface design for web and mobile.",
     social: {
       linkedin: "#",
@@ -73,9 +104,9 @@ const team = [
     },
   },
   {
-    name: "Michael Rodriguez",
-    role: "Senior Developer",
-    image: "/placeholder.svg?height=300&width=300",
+    name: "Omkar Bhatta",
+    role: "DotNet Developer ",
+    image: "/employees/8.jpg",
     bio: "Backend specialist with expertise in cloud architecture and database optimization.",
     social: {
       linkedin: "#",
@@ -84,9 +115,9 @@ const team = [
     },
   },
   {
-    name: "Emily Davis",
-    role: "Project Manager",
-    image: "/placeholder.svg?height=300&width=300",
+    name: "Deepak Khanal",
+    role: "Junior FullStack Developer",
+    image: "/employees/3.jpg",
     bio: "Experienced project manager ensuring smooth delivery and client satisfaction.",
     social: {
       linkedin: "#",
@@ -94,14 +125,91 @@ const team = [
       github: "#",
     },
   },
-]
+  {
+    name: "Sagar Lamichhane",
+    role: "Junior FullStack Developer",
+    image: "/employees/9.jpg",
+    bio: "Experienced project manager ensuring smooth delivery and client satisfaction.",
+    social: {
+      linkedin: "#",
+      twitter: "#",
+      github: "#",
+    },
+  },
+  {
+    name: "Melina Giri",
+    role: "Junior FullStack Developer",
+    image: "/employees/7.jpg",
+    bio: "Experienced project manager ensuring smooth delivery and client satisfaction.",
+    social: {
+      linkedin: "#",
+      twitter: "#",
+      github: "#",
+    },
+  },
+  {
+    name: "Abhyan Subedi",
+    role: "Dotnet Developer Developer",
+    image: "/employees/7.jpg",
+    bio: "Experienced project manager ensuring smooth delivery and client satisfaction.",
+    social: {
+      linkedin: "#",
+      twitter: "#",
+      github: "#",
+    },
+  },
+  {
+    name: "Tanu Khadka",
+    role: "CSR",
+    image: "/employees/10.jpg",
+    bio: "Experienced project manager ensuring smooth delivery and client satisfaction.",
+    social: {
+      linkedin: "#",
+      twitter: "#",
+      github: "#",
+    },
+  },
+  {
+    name: "Jacika Shrestha",
+    role: "CSR",
+    image: "/employees/6.jpg",
+    bio: "Experienced project manager ensuring smooth delivery and client satisfaction.",
+    social: {
+      linkedin: "#",
+      twitter: "#",
+      github: "#",
+    },
+  },
+  {
+    name: "Himal Gurung",
+    role: "CSR",
+    image: "/employees/4.jpg",
+    bio: "Experienced project manager ensuring smooth delivery and client satisfaction.",
+    social: {
+      linkedin: "#",
+      twitter: "#",
+      github: "#",
+    },
+  },
+  {
+    name: "Abhiral Paudel",
+    role: "Graphics Designer",
+    image: "/employees/1.jpg",
+    bio: "Experienced project manager ensuring smooth delivery and client satisfaction.",
+    social: {
+      linkedin: "#",
+      twitter: "#",
+      github: "#",
+    },
+  },
+];
 
 const stats = [
   { number: "50+", label: "Projects Completed" },
   { number: "25+", label: "Happy Clients" },
   { number: "5+", label: "Years Experience" },
   { number: "100%", label: "Client Satisfaction" },
-]
+];
 
 export default function AboutPage() {
   return (
@@ -119,10 +227,12 @@ export default function AboutPage() {
               <Badge variant="outline" className="mb-4">
                 About Us
               </Badge>
-              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">We're Building the Future</h1>
+              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+                We're Building the Future
+              </h1>
               <p className="text-xl text-[#334155]">
-                A passionate team of developers, designers, and innovators dedicated to creating exceptional digital
-                experiences.
+                A passionate team of developers, designers, and innovators
+                dedicated to creating exceptional digital experiences.
               </p>
             </motion.div>
           </motion.div>
@@ -140,21 +250,26 @@ export default function AboutPage() {
             variants={staggerContainer}
           >
             <motion.div className="space-y-6" variants={fadeInUp}>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Our Story</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                Our Story
+              </h2>
               <div className="space-y-4 text-[#334155]">
                 <p>
-                  Founded in 2019, Shakta Technology started as a small team of passionate developers who believed that great
-                  software could make a real difference in people's lives. What began as a side project quickly grew
-                  into a full-service digital agency.
+                  Founded in 2019, Shakta Technology started as a small team of
+                  passionate developers who believed that great software could
+                  make a real difference in people's lives. What began as a side
+                  project quickly grew into a full-service digital agency.
                 </p>
                 <p>
-                  Today, we're proud to have worked with startups, established businesses, and everything in between.
-                  Our mission remains the same: to transform ideas into powerful digital solutions that drive growth and
-                  create value.
+                  Today, we're proud to have worked with startups, established
+                  businesses, and everything in between. Our mission remains the
+                  same: to transform ideas into powerful digital solutions that
+                  drive growth and create value.
                 </p>
                 <p>
-                  We believe that the best software is built through collaboration, innovation, and a deep understanding
-                  of our clients' needs and goals.
+                  We believe that the best software is built through
+                  collaboration, innovation, and a deep understanding of our
+                  clients' needs and goals.
                 </p>
               </div>
             </motion.div>
@@ -186,13 +301,19 @@ export default function AboutPage() {
             variants={staggerContainer}
           >
             <motion.div className="text-center space-y-4" variants={fadeInUp}>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Our Values</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                Our Values
+              </h2>
               <p className="mx-auto max-w-[700px] text-[#334155] md:text-xl">
-                These core values guide everything we do and shape how we work with our clients and each other.
+                These core values guide everything we do and shape how we work
+                with our clients and each other.
               </p>
             </motion.div>
 
-            <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={staggerContainer}>
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+              variants={staggerContainer}
+            >
               {values.map((value, index) => (
                 <motion.div key={index} variants={fadeInUp}>
                   <Card className="h-full text-center p-6 hover:shadow-lg transition-all duration-300">
@@ -222,8 +343,14 @@ export default function AboutPage() {
             variants={staggerContainer}
           >
             {stats.map((stat, index) => (
-              <motion.div key={index} className="text-center space-y-2" variants={fadeInUp}>
-                <div className="text-4xl font-bold text-[#2563EB]">{stat.number}</div>
+              <motion.div
+                key={index}
+                className="text-center space-y-2"
+                variants={fadeInUp}
+              >
+                <div className="text-4xl font-bold text-[#2563EB]">
+                  {stat.number}
+                </div>
                 <p className="text-[#334155]">{stat.label}</p>
               </motion.div>
             ))}
@@ -242,14 +369,19 @@ export default function AboutPage() {
             variants={staggerContainer}
           >
             <motion.div className="text-center space-y-4" variants={fadeInUp}>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Meet Our Team</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                Meet Our Team
+              </h2>
               <p className="mx-auto max-w-[700px] text-[#334155] md:text-xl">
-                The talented individuals behind our success. Each team member brings unique skills and perspectives to
-                every project.
+                The talented individuals behind our success. Each team member
+                brings unique skills and perspectives to every project.
               </p>
             </motion.div>
 
-            <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={staggerContainer}>
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+              variants={staggerContainer}
+            >
               {team.map((member, index) => (
                 <motion.div key={index} variants={fadeInUp}>
                   <Card className="text-center overflow-hidden hover:shadow-lg transition-all duration-300">
@@ -269,13 +401,22 @@ export default function AboutPage() {
                       </div>
                       <p className="text-[#334155] text-sm">{member.bio}</p>
                       <div className="flex justify-center space-x-4">
-                        <Link href={member.social.linkedin} className="text-[#334155] hover:text-[#2563EB]">
+                        <Link
+                          href={member.social.linkedin}
+                          className="text-[#334155] hover:text-[#2563EB]"
+                        >
                           <Linkedin className="h-5 w-5" />
                         </Link>
-                        <Link href={member.social.twitter} className="text-[#334155] hover:text-[#2563EB]">
+                        <Link
+                          href={member.social.twitter}
+                          className="text-[#334155] hover:text-[#2563EB]"
+                        >
                           <Twitter className="h-5 w-5" />
                         </Link>
-                        <Link href={member.social.github} className="text-[#334155] hover:text-[#2563EB]">
+                        <Link
+                          href={member.social.github}
+                          className="text-[#334155] hover:text-[#2563EB]"
+                        >
                           <Github className="h-5 w-5" />
                         </Link>
                       </div>
@@ -299,13 +440,19 @@ export default function AboutPage() {
             variants={staggerContainer}
           >
             <motion.div className="space-y-4" variants={fadeInUp}>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Want to Work With Us?</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                Want to Work With Us?
+              </h2>
               <p className="text-xl text-[#334155]">
-                We're always excited to work on new projects and help businesses achieve their digital goals.
+                We're always excited to work on new projects and help businesses
+                achieve their digital goals.
               </p>
             </motion.div>
 
-            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={fadeInUp}>
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              variants={fadeInUp}
+            >
               <Button size="lg" asChild>
                 <Link href="/contact" className="text-white">
                   Get In Touch
@@ -320,5 +467,5 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

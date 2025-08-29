@@ -85,13 +85,7 @@ const portfolioItems = [
     image: "/websites/ecom.jpg",
     description: "Modern e-commerce solution with advanced features",
   },
-  {
-    id: 2,
-    title: "Mobile Banking App",
-    category: "Mobile",
-    image: "/websites/wallet.jpg",
-    description: "Secure banking application with biometric authentication",
-  },
+ 
   {
     id: 3,
     title: "SaaS Dashboard",
